@@ -52,49 +52,17 @@
   "signupSuccess":"Registration Successful",
   "signupOpenTermsOfUse" : "Please read Terms of uses",
 
-  "homeButtonDriver":"Driver",
-  "homeButtonPassenger":"Passenger",
-  "homeDisableButton":"Stop carpooling",
-
-  "homeCardInformation":"Information",
-  "homeCardDriver":"Driver",
-  "homeCardStartJourney":"Start of the journey at",
-  "homeCardStartJourneyTime":"The journey started from",
-  "homeCardDistanceTraveled" : "Distance traveled",
-
-  "homeAlertDialogCarpoolWith":"Do you want to carpool with",
-  "homeAlertDialogStopCarpool":"Do you want to stop carpooling ?",
-
-  "homeWaitingButton":"Please wait before pressing again.",
-
-  "journeys":"Journeys",
-  "journeysOf":"Journey of",
-
-  "vehiclesCar":"Car name",
-  "vehiclesCarSentence":"Enter your car name",
-  "vehiclesPlateNumber":"Plate number",
-  "vehiclesPlatenumberSentence":"Enter your car plate number",
-  "vehiclesCO2":"CO2 emission / km",
-  "vehiclesCO2Sentence":"Enter your car CO2 emission / km",
-  "vehiclesTaxHorsePower":"Tax horsepower",
-  "vehiclesTaxHorsePowerSentence":"Enter your car tax horsepower",
-  "vehiclesAdd":"Add vehicle",
-
-  "businessMyBussinessSentence":"Choose your business",
-  "businessMySiteSentence":"Choose your site business",
+  "homeButton":"Add plant",
 
   "feedbackType" : "Feedback type",
   "feedbackReportBug" : "Report a problem",
   "feedbackSuggestion" : "Suggest an improvement",
   "feedbackQuestion":"Ask a question",
-   "feedbackDescription" : "Write your feedback",
-   "feedbackButton": "Send feedback",
+  "feedbackDescription" : "Write your feedback",
+  "feedbackButton": "Send feedback",
 
 
-  "myJourneys" : "My journeys",
-  "myVehicles" : "My vehicles",
-  "myBusiness" : "My business",
-  "feedback" : "Feedback",
+  "feedback" : "Commentaire",
   "settings" : "Settings",
   "settingsLanguage" : "Language",
   "settingsLanguageSentence": "Choose your language",

@@ -55,36 +55,7 @@
   "signupSuccess":"Enregistrement success",
   "signupOpenTermsOfUse" : "Veuillez lire les conditions d'utilisations",
 
-  "homeButtonDriver":"Conducteur",
-  "homeButtonPassenger":"Passager",
-  "homeDisableButton":"Arrêter covoiturage",
-
-  "homeCardInformation":"Informations",
-  "homeCardDriver":"Conducteur",
-  "homeCardStartJourney":"Début du trajet à",
-  "homeCardStartJourneyTime":"Le trajet a commencé depuis",
-  "homeCardDistanceTraveled" : "Distance parcourue",
-
-  "homeAlertDialogCarpoolWith":"Voulez-vous covoiturer avec",
-  "homeAlertDialogStopCarpool":"Voulez-vous arrêter le covoiturage ?",
-
-  "homeWaitingButton":"Veuillez attendre avant de rappuyer.",
-
-  "journeys" : "Trajets",
-  "journeysOf":"Trajet du ",
-
-  "vehiclesCar":"Nom de votre voiture",
-  "vehiclesCarSentence":"Entrer le nom de votre voiture",
-  "vehiclesPlateNumber":"Plaque d'immatriculation",
-  "vehiclesPlatenumberSentence":"Entrer votre plaque d'immatriculation",
-  "vehiclesCO2":"Emission de CO2 / km",
-  "vehiclesCO2Sentence":"Entrer l'émission de CO2 / km",
-  "vehiclesTaxHorsePower":"Chevaux fiscaux",
-  "vehiclesTaxHorsePowerSentence":"Entrer le nombre de chevaux fiscaux",
-  "vehiclesAdd":"Ajouter véhicule",
-
-  "businessMyBussinessSentence":"Choisissez votre entreprise",
-  "businessMySiteSentence":"Choisissez votre site",
+  "homeButton":"Ajouter une plante",
 
   "feedbackType" : "Type de commentaire",
   "feedbackReportBug" : "Signaler un problème",
@@ -93,9 +64,6 @@
   "feedbackDescription" : "Ecrivez votre commentaire",
   "feedbackButton": "Envoyer votre commentaire",
 
-  "myJourneys" : "Mes trajets",
-  "myVehicles" : "Mes véhicules",
-  "myBusiness" : "Mon entreprise",
   "feedback" : "Commentaire",
   "settings" : "Paramètres",
   "settingsLanguage" : "Langage",

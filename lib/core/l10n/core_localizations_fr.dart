@@ -149,76 +149,7 @@ class CoreLocalizationsFr extends CoreLocalizations {
   String get signupOpenTermsOfUse => 'Veuillez lire les conditions d\'utilisations';
 
   @override
-  String get homeButtonDriver => 'Conducteur';
-
-  @override
-  String get homeButtonPassenger => 'Passager';
-
-  @override
-  String get homeDisableButton => 'Arrêter covoiturage';
-
-  @override
-  String get homeCardInformation => 'Informations';
-
-  @override
-  String get homeCardDriver => 'Conducteur';
-
-  @override
-  String get homeCardStartJourney => 'Début du trajet à';
-
-  @override
-  String get homeCardStartJourneyTime => 'Le trajet a commencé depuis';
-
-  @override
-  String get homeCardDistanceTraveled => 'Distance parcourue';
-
-  @override
-  String get homeAlertDialogCarpoolWith => 'Voulez-vous covoiturer avec';
-
-  @override
-  String get homeAlertDialogStopCarpool => 'Voulez-vous arrêter le covoiturage ?';
-
-  @override
-  String get homeWaitingButton => 'Veuillez attendre avant de rappuyer.';
-
-  @override
-  String get journeys => 'Trajets';
-
-  @override
-  String get journeysOf => 'Trajet du ';
-
-  @override
-  String get vehiclesCar => 'Nom de votre voiture';
-
-  @override
-  String get vehiclesCarSentence => 'Entrer le nom de votre voiture';
-
-  @override
-  String get vehiclesPlateNumber => 'Plaque d\'immatriculation';
-
-  @override
-  String get vehiclesPlatenumberSentence => 'Entrer votre plaque d\'immatriculation';
-
-  @override
-  String get vehiclesCO2 => 'Emission de CO2 / km';
-
-  @override
-  String get vehiclesCO2Sentence => 'Entrer l\'émission de CO2 / km';
-
-  @override
-  String get vehiclesTaxHorsePower => 'Chevaux fiscaux';
-
-  @override
-  String get vehiclesTaxHorsePowerSentence => 'Entrer le nombre de chevaux fiscaux';
-
-  @override
-  String get vehiclesAdd => 'Ajouter véhicule';
-
-  @override
-  String get businessMyBussinessSentence => 'Choisissez votre entreprise';
-
-  @override
-  String get businessMySiteSentence => 'Choisissez votre site';
+  String get homeButton => 'Ajouter une plante';
 
   @override
   String get feedbackType => 'Type de commentaire';
@@ -237,15 +168,6 @@ class CoreLocalizationsFr extends CoreLocalizations {
 
   @override
   String get feedbackButton => 'Envoyer votre commentaire';
-
-  @override
-  String get myJourneys => 'Mes trajets';
-
-  @override
-  String get myVehicles => 'Mes véhicules';
-
-  @override
-  String get myBusiness => 'Mon entreprise';
 
   @override
   String get feedback => 'Commentaire';

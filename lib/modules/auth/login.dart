@@ -1,4 +1,5 @@
 import 'package:arosa_je/core/core.dart';
+import 'package:arosa_je/modules/app/session_manager.dart';
 import 'package:arosa_je/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -42,6 +43,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const Image(image: AssetImage('lib/assets/images/icon.png')),
                   Text(
                     coreL10n.signinTitle1,
                     style: const TextStyle(
@@ -94,6 +96,8 @@ class _LoginViewState extends ConsumerState<LoginView> {
                         label: coreL10n.signin,
                         fontSize: 18.0,
                         onPressed: () async {
+                          await SessionManager.setUsername(_login.text);
+                          await SessionManager.setLoggedIn(true);
                           context.goNamed(AppRoute.home.name);
                           //context.goNamed(AppRoute.home.name);
                           /*ref
@@ -109,8 +113,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
                             // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
                             if (loginNotifier.state) {
                               // Connexion réussie
-                              await SessionManager.setUsername(
-                                  _login.text); //TODO change to token
+                               //TODO change to token
                               await SessionManager.setLoggedIn(true);
                               // ignore: use_build_context_synchronously
                               context.goNamed(AppRoute.home.name);

@@ -149,76 +149,7 @@ class CoreLocalizationsEn extends CoreLocalizations {
   String get signupOpenTermsOfUse => 'Please read Terms of uses';
 
   @override
-  String get homeButtonDriver => 'Driver';
-
-  @override
-  String get homeButtonPassenger => 'Passenger';
-
-  @override
-  String get homeDisableButton => 'Stop carpooling';
-
-  @override
-  String get homeCardInformation => 'Information';
-
-  @override
-  String get homeCardDriver => 'Driver';
-
-  @override
-  String get homeCardStartJourney => 'Start of the journey at';
-
-  @override
-  String get homeCardStartJourneyTime => 'The journey started from';
-
-  @override
-  String get homeCardDistanceTraveled => 'Distance traveled';
-
-  @override
-  String get homeAlertDialogCarpoolWith => 'Do you want to carpool with';
-
-  @override
-  String get homeAlertDialogStopCarpool => 'Do you want to stop carpooling ?';
-
-  @override
-  String get homeWaitingButton => 'Please wait before pressing again.';
-
-  @override
-  String get journeys => 'Journeys';
-
-  @override
-  String get journeysOf => 'Journey of';
-
-  @override
-  String get vehiclesCar => 'Car name';
-
-  @override
-  String get vehiclesCarSentence => 'Enter your car name';
-
-  @override
-  String get vehiclesPlateNumber => 'Plate number';
-
-  @override
-  String get vehiclesPlatenumberSentence => 'Enter your car plate number';
-
-  @override
-  String get vehiclesCO2 => 'CO2 emission / km';
-
-  @override
-  String get vehiclesCO2Sentence => 'Enter your car CO2 emission / km';
-
-  @override
-  String get vehiclesTaxHorsePower => 'Tax horsepower';
-
-  @override
-  String get vehiclesTaxHorsePowerSentence => 'Enter your car tax horsepower';
-
-  @override
-  String get vehiclesAdd => 'Add vehicle';
-
-  @override
-  String get businessMyBussinessSentence => 'Choose your business';
-
-  @override
-  String get businessMySiteSentence => 'Choose your site business';
+  String get homeButton => 'Add plant';
 
   @override
   String get feedbackType => 'Feedback type';
@@ -239,16 +170,7 @@ class CoreLocalizationsEn extends CoreLocalizations {
   String get feedbackButton => 'Send feedback';
 
   @override
-  String get myJourneys => 'My journeys';
-
-  @override
-  String get myVehicles => 'My vehicles';
-
-  @override
-  String get myBusiness => 'My business';
-
-  @override
-  String get feedback => 'Feedback';
+  String get feedback => 'Commentaire';
 
   @override
   String get settings => 'Settings';

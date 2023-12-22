@@ -381,149 +381,11 @@ abstract class CoreLocalizations {
   /// **'Please read Terms of uses'**
   String get signupOpenTermsOfUse;
 
-  /// No description provided for @homeButtonDriver.
+  /// No description provided for @homeButton.
   ///
   /// In en, this message translates to:
-  /// **'Driver'**
-  String get homeButtonDriver;
-
-  /// No description provided for @homeButtonPassenger.
-  ///
-  /// In en, this message translates to:
-  /// **'Passenger'**
-  String get homeButtonPassenger;
-
-  /// No description provided for @homeDisableButton.
-  ///
-  /// In en, this message translates to:
-  /// **'Stop carpooling'**
-  String get homeDisableButton;
-
-  /// No description provided for @homeCardInformation.
-  ///
-  /// In en, this message translates to:
-  /// **'Information'**
-  String get homeCardInformation;
-
-  /// No description provided for @homeCardDriver.
-  ///
-  /// In en, this message translates to:
-  /// **'Driver'**
-  String get homeCardDriver;
-
-  /// No description provided for @homeCardStartJourney.
-  ///
-  /// In en, this message translates to:
-  /// **'Start of the journey at'**
-  String get homeCardStartJourney;
-
-  /// No description provided for @homeCardStartJourneyTime.
-  ///
-  /// In en, this message translates to:
-  /// **'The journey started from'**
-  String get homeCardStartJourneyTime;
-
-  /// No description provided for @homeCardDistanceTraveled.
-  ///
-  /// In en, this message translates to:
-  /// **'Distance traveled'**
-  String get homeCardDistanceTraveled;
-
-  /// No description provided for @homeAlertDialogCarpoolWith.
-  ///
-  /// In en, this message translates to:
-  /// **'Do you want to carpool with'**
-  String get homeAlertDialogCarpoolWith;
-
-  /// No description provided for @homeAlertDialogStopCarpool.
-  ///
-  /// In en, this message translates to:
-  /// **'Do you want to stop carpooling ?'**
-  String get homeAlertDialogStopCarpool;
-
-  /// No description provided for @homeWaitingButton.
-  ///
-  /// In en, this message translates to:
-  /// **'Please wait before pressing again.'**
-  String get homeWaitingButton;
-
-  /// No description provided for @journeys.
-  ///
-  /// In en, this message translates to:
-  /// **'Journeys'**
-  String get journeys;
-
-  /// No description provided for @journeysOf.
-  ///
-  /// In en, this message translates to:
-  /// **'Journey of'**
-  String get journeysOf;
-
-  /// No description provided for @vehiclesCar.
-  ///
-  /// In en, this message translates to:
-  /// **'Car name'**
-  String get vehiclesCar;
-
-  /// No description provided for @vehiclesCarSentence.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter your car name'**
-  String get vehiclesCarSentence;
-
-  /// No description provided for @vehiclesPlateNumber.
-  ///
-  /// In en, this message translates to:
-  /// **'Plate number'**
-  String get vehiclesPlateNumber;
-
-  /// No description provided for @vehiclesPlatenumberSentence.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter your car plate number'**
-  String get vehiclesPlatenumberSentence;
-
-  /// No description provided for @vehiclesCO2.
-  ///
-  /// In en, this message translates to:
-  /// **'CO2 emission / km'**
-  String get vehiclesCO2;
-
-  /// No description provided for @vehiclesCO2Sentence.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter your car CO2 emission / km'**
-  String get vehiclesCO2Sentence;
-
-  /// No description provided for @vehiclesTaxHorsePower.
-  ///
-  /// In en, this message translates to:
-  /// **'Tax horsepower'**
-  String get vehiclesTaxHorsePower;
-
-  /// No description provided for @vehiclesTaxHorsePowerSentence.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter your car tax horsepower'**
-  String get vehiclesTaxHorsePowerSentence;
-
-  /// No description provided for @vehiclesAdd.
-  ///
-  /// In en, this message translates to:
-  /// **'Add vehicle'**
-  String get vehiclesAdd;
-
-  /// No description provided for @businessMyBussinessSentence.
-  ///
-  /// In en, this message translates to:
-  /// **'Choose your business'**
-  String get businessMyBussinessSentence;
-
-  /// No description provided for @businessMySiteSentence.
-  ///
-  /// In en, this message translates to:
-  /// **'Choose your site business'**
-  String get businessMySiteSentence;
+  /// **'Add plant'**
+  String get homeButton;
 
   /// No description provided for @feedbackType.
   ///
@@ -561,28 +423,10 @@ abstract class CoreLocalizations {
   /// **'Send feedback'**
   String get feedbackButton;
 
-  /// No description provided for @myJourneys.
-  ///
-  /// In en, this message translates to:
-  /// **'My journeys'**
-  String get myJourneys;
-
-  /// No description provided for @myVehicles.
-  ///
-  /// In en, this message translates to:
-  /// **'My vehicles'**
-  String get myVehicles;
-
-  /// No description provided for @myBusiness.
-  ///
-  /// In en, this message translates to:
-  /// **'My business'**
-  String get myBusiness;
-
   /// No description provided for @feedback.
   ///
   /// In en, this message translates to:
-  /// **'Feedback'**
+  /// **'Commentaire'**
   String get feedback;
 
   /// No description provided for @settings.
