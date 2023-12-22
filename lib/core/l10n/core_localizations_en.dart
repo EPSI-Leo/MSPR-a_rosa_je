@@ -1,0 +1,306 @@
+import 'core_localizations.dart';
+
+/// The translations for English (`en`).
+class CoreLocalizationsEn extends CoreLocalizations {
+  CoreLocalizationsEn([String locale = 'en']) : super(locale);
+
+  @override
+  String get validateEmail => 'Please enter an email address';
+
+  @override
+  String get validateEmailValid => 'Please enter a valid email address';
+
+  @override
+  String get validatePhone => 'Please enter an phone number';
+
+  @override
+  String get validatePhoneValid => 'Please enter a valid phone number';
+
+  @override
+  String get validatePostaleCode => 'Please enter a postal code';
+
+  @override
+  String get validatePostaleCodeValid => 'Please enter a valid postal code';
+
+  @override
+  String get validateText => 'Please complete this field';
+
+  @override
+  String get sendSuccessfully => 'Your message has been sent successfully !';
+
+  @override
+  String get notificationBackgroundTitle => 'Oleys';
+
+  @override
+  String get notificationBackgroundMessage => 'Carpool GPS tracking is underway';
+
+  @override
+  String get popupchoosetypecovoit => 'Carpool for :';
+
+  @override
+  String get signinTitle1 => 'WELCOME';
+
+  @override
+  String get signinSentence1 => 'Please login to continue';
+
+  @override
+  String get signinUsername => 'Username';
+
+  @override
+  String get signinUsernameSentence => 'Enter your username';
+
+  @override
+  String get signinPassword => 'Password';
+
+  @override
+  String get signinPasswordSentence => 'Enter your password';
+
+  @override
+  String get signinRememberMe => 'Remember me';
+
+  @override
+  String get signinForgotPassword => 'Forgot your password ?';
+
+  @override
+  String get signin => 'Sign in';
+
+  @override
+  String get signinContinueWith => 'or continue with';
+
+  @override
+  String get signinGoogle => 'Sign in with Google';
+
+  @override
+  String get signinDontHaveAccount => 'Not registered ?';
+
+  @override
+  String get signinLoginSuccess => 'Login Successful';
+
+  @override
+  String get signinIncorrect => 'Username or password invalid';
+
+  @override
+  String get signupTitle => 'Create account';
+
+  @override
+  String get signupEnterText => 'Please enter some text';
+
+  @override
+  String get signupFirstName => 'FirstName';
+
+  @override
+  String get signupFirstNameSentence => 'Enter your first name';
+
+  @override
+  String get signupLastName => 'LastName';
+
+  @override
+  String get signupLastNameSentence => 'Enter your last name';
+
+  @override
+  String get signupEmail => 'Email';
+
+  @override
+  String get signupEmailSentence => 'Enter your email';
+
+  @override
+  String get signupPhone => 'Phone number';
+
+  @override
+  String get signupPhoneSentence => 'Enter your phone number';
+
+  @override
+  String get signupAddress => 'Address';
+
+  @override
+  String get signupAddressSentence => 'Enter your address';
+
+  @override
+  String get signupCity => 'City';
+
+  @override
+  String get signupCitySentence => 'Enter your city';
+
+  @override
+  String get signupPostalCode => 'Postal code';
+
+  @override
+  String get signupPostalCodeSentence => 'Enter your postal code';
+
+  @override
+  String get signupTermsOfuse => 'I accept the conditions of use';
+
+  @override
+  String get signup => 'Sign up';
+
+  @override
+  String get signupGoogle => 'Sign up with Google';
+
+  @override
+  String get signupHaveAccount => 'Already have an account ?';
+
+  @override
+  String get signupUserExist => 'User already exit!';
+
+  @override
+  String get signupSuccess => 'Registration Successful';
+
+  @override
+  String get signupOpenTermsOfUse => 'Please read Terms of uses';
+
+  @override
+  String get homeButtonDriver => 'Driver';
+
+  @override
+  String get homeButtonPassenger => 'Passenger';
+
+  @override
+  String get homeDisableButton => 'Stop carpooling';
+
+  @override
+  String get homeCardInformation => 'Information';
+
+  @override
+  String get homeCardDriver => 'Driver';
+
+  @override
+  String get homeCardStartJourney => 'Start of the journey at';
+
+  @override
+  String get homeCardStartJourneyTime => 'The journey started from';
+
+  @override
+  String get homeCardDistanceTraveled => 'Distance traveled';
+
+  @override
+  String get homeAlertDialogCarpoolWith => 'Do you want to carpool with';
+
+  @override
+  String get homeAlertDialogStopCarpool => 'Do you want to stop carpooling ?';
+
+  @override
+  String get homeWaitingButton => 'Please wait before pressing again.';
+
+  @override
+  String get journeys => 'Journeys';
+
+  @override
+  String get journeysOf => 'Journey of';
+
+  @override
+  String get vehiclesCar => 'Car name';
+
+  @override
+  String get vehiclesCarSentence => 'Enter your car name';
+
+  @override
+  String get vehiclesPlateNumber => 'Plate number';
+
+  @override
+  String get vehiclesPlatenumberSentence => 'Enter your car plate number';
+
+  @override
+  String get vehiclesCO2 => 'CO2 emission / km';
+
+  @override
+  String get vehiclesCO2Sentence => 'Enter your car CO2 emission / km';
+
+  @override
+  String get vehiclesTaxHorsePower => 'Tax horsepower';
+
+  @override
+  String get vehiclesTaxHorsePowerSentence => 'Enter your car tax horsepower';
+
+  @override
+  String get vehiclesAdd => 'Add vehicle';
+
+  @override
+  String get businessMyBussinessSentence => 'Choose your business';
+
+  @override
+  String get businessMySiteSentence => 'Choose your site business';
+
+  @override
+  String get feedbackType => 'Feedback type';
+
+  @override
+  String get feedbackReportBug => 'Report a problem';
+
+  @override
+  String get feedbackSuggestion => 'Suggest an improvement';
+
+  @override
+  String get feedbackQuestion => 'Ask a question';
+
+  @override
+  String get feedbackDescription => 'Write your feedback';
+
+  @override
+  String get feedbackButton => 'Send feedback';
+
+  @override
+  String get myJourneys => 'My journeys';
+
+  @override
+  String get myVehicles => 'My vehicles';
+
+  @override
+  String get myBusiness => 'My business';
+
+  @override
+  String get feedback => 'Feedback';
+
+  @override
+  String get settings => 'Settings';
+
+  @override
+  String get settingsLanguage => 'Language';
+
+  @override
+  String get settingsLanguageSentence => 'Choose your language';
+
+  @override
+  String get account => 'Account';
+
+  @override
+  String get deleteAccount => 'Delete my account';
+
+  @override
+  String get deleteAccountSentence => 'Are you sure you want to delete your account ?';
+
+  @override
+  String get disconnect => 'Logout';
+
+  @override
+  String get me => 'me';
+
+  @override
+  String get language => 'English';
+
+  @override
+  String get validate => 'Validate';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get confirmation => 'Confirmation';
+
+  @override
+  String get yes => 'Yes';
+
+  @override
+  String get no => 'No';
+
+  @override
+  String get accept => 'Accept';
+
+  @override
+  String get refuse => 'Refuse';
+
+  @override
+  String get skip => 'Skip';
+
+  @override
+  String get confirm => 'Confirm';
+}

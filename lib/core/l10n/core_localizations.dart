@@ -1,0 +1,727 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/intl.dart' as intl;
+
+import 'core_localizations_en.dart';
+import 'core_localizations_fr.dart';
+
+/// Callers can lookup localized strings with an instance of CoreLocalizations
+/// returned by `CoreLocalizations.of(context)`.
+///
+/// Applications need to include `CoreLocalizations.delegate()` in their app's
+/// `localizationDelegates` list, and the locales they support in the app's
+/// `supportedLocales` list. For example:
+///
+/// ```dart
+/// import 'l10n/core_localizations.dart';
+///
+/// return MaterialApp(
+///   localizationsDelegates: CoreLocalizations.localizationsDelegates,
+///   supportedLocales: CoreLocalizations.supportedLocales,
+///   home: MyApplicationHome(),
+/// );
+/// ```
+///
+/// ## Update pubspec.yaml
+///
+/// Please make sure to update your pubspec.yaml to include the following
+/// packages:
+///
+/// ```yaml
+/// dependencies:
+///   # Internationalization support.
+///   flutter_localizations:
+///     sdk: flutter
+///   intl: any # Use the pinned version from flutter_localizations
+///
+///   # Rest of dependencies
+/// ```
+///
+/// ## iOS Applications
+///
+/// iOS applications define key application metadata, including supported
+/// locales, in an Info.plist file that is built into the application bundle.
+/// To configure the locales supported by your app, you’ll need to edit this
+/// file.
+///
+/// First, open your project’s ios/Runner.xcworkspace Xcode workspace file.
+/// Then, in the Project Navigator, open the Info.plist file under the Runner
+/// project’s Runner folder.
+///
+/// Next, select the Information Property List item, select Add Item from the
+/// Editor menu, then select Localizations from the pop-up menu.
+///
+/// Select and expand the newly-created Localizations item then, for each
+/// locale your application supports, add a new item and select the locale
+/// you wish to add from the pop-up menu in the Value field. This list should
+/// be consistent with the languages listed in the CoreLocalizations.supportedLocales
+/// property.
+abstract class CoreLocalizations {
+  CoreLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+
+  final String localeName;
+
+  static CoreLocalizations? of(BuildContext context) {
+    return Localizations.of<CoreLocalizations>(context, CoreLocalizations);
+  }
+
+  static const LocalizationsDelegate<CoreLocalizations> delegate = _CoreLocalizationsDelegate();
+
+  /// A list of this localizations delegate along with the default localizations
+  /// delegates.
+  ///
+  /// Returns a list of localizations delegates containing this delegate along with
+  /// GlobalMaterialLocalizations.delegate, GlobalCupertinoLocalizations.delegate,
+  /// and GlobalWidgetsLocalizations.delegate.
+  ///
+  /// Additional delegates can be added by appending to this list in
+  /// MaterialApp. This list does not have to be used at all if a custom list
+  /// of delegates is preferred or required.
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
+
+  /// A list of this localizations delegate's supported locales.
+  static const List<Locale> supportedLocales = <Locale>[
+    Locale('en'),
+    Locale('fr')
+  ];
+
+  /// No description provided for @validateEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter an email address'**
+  String get validateEmail;
+
+  /// No description provided for @validateEmailValid.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email address'**
+  String get validateEmailValid;
+
+  /// No description provided for @validatePhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter an phone number'**
+  String get validatePhone;
+
+  /// No description provided for @validatePhoneValid.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid phone number'**
+  String get validatePhoneValid;
+
+  /// No description provided for @validatePostaleCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a postal code'**
+  String get validatePostaleCode;
+
+  /// No description provided for @validatePostaleCodeValid.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid postal code'**
+  String get validatePostaleCodeValid;
+
+  /// No description provided for @validateText.
+  ///
+  /// In en, this message translates to:
+  /// **'Please complete this field'**
+  String get validateText;
+
+  /// No description provided for @sendSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Your message has been sent successfully !'**
+  String get sendSuccessfully;
+
+  /// No description provided for @notificationBackgroundTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Oleys'**
+  String get notificationBackgroundTitle;
+
+  /// No description provided for @notificationBackgroundMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Carpool GPS tracking is underway'**
+  String get notificationBackgroundMessage;
+
+  /// No description provided for @popupchoosetypecovoit.
+  ///
+  /// In en, this message translates to:
+  /// **'Carpool for :'**
+  String get popupchoosetypecovoit;
+
+  /// No description provided for @signinTitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'WELCOME'**
+  String get signinTitle1;
+
+  /// No description provided for @signinSentence1.
+  ///
+  /// In en, this message translates to:
+  /// **'Please login to continue'**
+  String get signinSentence1;
+
+  /// No description provided for @signinUsername.
+  ///
+  /// In en, this message translates to:
+  /// **'Username'**
+  String get signinUsername;
+
+  /// No description provided for @signinUsernameSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your username'**
+  String get signinUsernameSentence;
+
+  /// No description provided for @signinPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get signinPassword;
+
+  /// No description provided for @signinPasswordSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your password'**
+  String get signinPasswordSentence;
+
+  /// No description provided for @signinRememberMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Remember me'**
+  String get signinRememberMe;
+
+  /// No description provided for @signinForgotPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot your password ?'**
+  String get signinForgotPassword;
+
+  /// No description provided for @signin.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get signin;
+
+  /// No description provided for @signinContinueWith.
+  ///
+  /// In en, this message translates to:
+  /// **'or continue with'**
+  String get signinContinueWith;
+
+  /// No description provided for @signinGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with Google'**
+  String get signinGoogle;
+
+  /// No description provided for @signinDontHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Not registered ?'**
+  String get signinDontHaveAccount;
+
+  /// No description provided for @signinLoginSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Login Successful'**
+  String get signinLoginSuccess;
+
+  /// No description provided for @signinIncorrect.
+  ///
+  /// In en, this message translates to:
+  /// **'Username or password invalid'**
+  String get signinIncorrect;
+
+  /// No description provided for @signupTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get signupTitle;
+
+  /// No description provided for @signupEnterText.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter some text'**
+  String get signupEnterText;
+
+  /// No description provided for @signupFirstName.
+  ///
+  /// In en, this message translates to:
+  /// **'FirstName'**
+  String get signupFirstName;
+
+  /// No description provided for @signupFirstNameSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your first name'**
+  String get signupFirstNameSentence;
+
+  /// No description provided for @signupLastName.
+  ///
+  /// In en, this message translates to:
+  /// **'LastName'**
+  String get signupLastName;
+
+  /// No description provided for @signupLastNameSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your last name'**
+  String get signupLastNameSentence;
+
+  /// No description provided for @signupEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get signupEmail;
+
+  /// No description provided for @signupEmailSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email'**
+  String get signupEmailSentence;
+
+  /// No description provided for @signupPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number'**
+  String get signupPhone;
+
+  /// No description provided for @signupPhoneSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your phone number'**
+  String get signupPhoneSentence;
+
+  /// No description provided for @signupAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get signupAddress;
+
+  /// No description provided for @signupAddressSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your address'**
+  String get signupAddressSentence;
+
+  /// No description provided for @signupCity.
+  ///
+  /// In en, this message translates to:
+  /// **'City'**
+  String get signupCity;
+
+  /// No description provided for @signupCitySentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your city'**
+  String get signupCitySentence;
+
+  /// No description provided for @signupPostalCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Postal code'**
+  String get signupPostalCode;
+
+  /// No description provided for @signupPostalCodeSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your postal code'**
+  String get signupPostalCodeSentence;
+
+  /// No description provided for @signupTermsOfuse.
+  ///
+  /// In en, this message translates to:
+  /// **'I accept the conditions of use'**
+  String get signupTermsOfuse;
+
+  /// No description provided for @signup.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up'**
+  String get signup;
+
+  /// No description provided for @signupGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up with Google'**
+  String get signupGoogle;
+
+  /// No description provided for @signupHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account ?'**
+  String get signupHaveAccount;
+
+  /// No description provided for @signupUserExist.
+  ///
+  /// In en, this message translates to:
+  /// **'User already exit!'**
+  String get signupUserExist;
+
+  /// No description provided for @signupSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Registration Successful'**
+  String get signupSuccess;
+
+  /// No description provided for @signupOpenTermsOfUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Please read Terms of uses'**
+  String get signupOpenTermsOfUse;
+
+  /// No description provided for @homeButtonDriver.
+  ///
+  /// In en, this message translates to:
+  /// **'Driver'**
+  String get homeButtonDriver;
+
+  /// No description provided for @homeButtonPassenger.
+  ///
+  /// In en, this message translates to:
+  /// **'Passenger'**
+  String get homeButtonPassenger;
+
+  /// No description provided for @homeDisableButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop carpooling'**
+  String get homeDisableButton;
+
+  /// No description provided for @homeCardInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'Information'**
+  String get homeCardInformation;
+
+  /// No description provided for @homeCardDriver.
+  ///
+  /// In en, this message translates to:
+  /// **'Driver'**
+  String get homeCardDriver;
+
+  /// No description provided for @homeCardStartJourney.
+  ///
+  /// In en, this message translates to:
+  /// **'Start of the journey at'**
+  String get homeCardStartJourney;
+
+  /// No description provided for @homeCardStartJourneyTime.
+  ///
+  /// In en, this message translates to:
+  /// **'The journey started from'**
+  String get homeCardStartJourneyTime;
+
+  /// No description provided for @homeCardDistanceTraveled.
+  ///
+  /// In en, this message translates to:
+  /// **'Distance traveled'**
+  String get homeCardDistanceTraveled;
+
+  /// No description provided for @homeAlertDialogCarpoolWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to carpool with'**
+  String get homeAlertDialogCarpoolWith;
+
+  /// No description provided for @homeAlertDialogStopCarpool.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to stop carpooling ?'**
+  String get homeAlertDialogStopCarpool;
+
+  /// No description provided for @homeWaitingButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Please wait before pressing again.'**
+  String get homeWaitingButton;
+
+  /// No description provided for @journeys.
+  ///
+  /// In en, this message translates to:
+  /// **'Journeys'**
+  String get journeys;
+
+  /// No description provided for @journeysOf.
+  ///
+  /// In en, this message translates to:
+  /// **'Journey of'**
+  String get journeysOf;
+
+  /// No description provided for @vehiclesCar.
+  ///
+  /// In en, this message translates to:
+  /// **'Car name'**
+  String get vehiclesCar;
+
+  /// No description provided for @vehiclesCarSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your car name'**
+  String get vehiclesCarSentence;
+
+  /// No description provided for @vehiclesPlateNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Plate number'**
+  String get vehiclesPlateNumber;
+
+  /// No description provided for @vehiclesPlatenumberSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your car plate number'**
+  String get vehiclesPlatenumberSentence;
+
+  /// No description provided for @vehiclesCO2.
+  ///
+  /// In en, this message translates to:
+  /// **'CO2 emission / km'**
+  String get vehiclesCO2;
+
+  /// No description provided for @vehiclesCO2Sentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your car CO2 emission / km'**
+  String get vehiclesCO2Sentence;
+
+  /// No description provided for @vehiclesTaxHorsePower.
+  ///
+  /// In en, this message translates to:
+  /// **'Tax horsepower'**
+  String get vehiclesTaxHorsePower;
+
+  /// No description provided for @vehiclesTaxHorsePowerSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your car tax horsepower'**
+  String get vehiclesTaxHorsePowerSentence;
+
+  /// No description provided for @vehiclesAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add vehicle'**
+  String get vehiclesAdd;
+
+  /// No description provided for @businessMyBussinessSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your business'**
+  String get businessMyBussinessSentence;
+
+  /// No description provided for @businessMySiteSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your site business'**
+  String get businessMySiteSentence;
+
+  /// No description provided for @feedbackType.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback type'**
+  String get feedbackType;
+
+  /// No description provided for @feedbackReportBug.
+  ///
+  /// In en, this message translates to:
+  /// **'Report a problem'**
+  String get feedbackReportBug;
+
+  /// No description provided for @feedbackSuggestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest an improvement'**
+  String get feedbackSuggestion;
+
+  /// No description provided for @feedbackQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask a question'**
+  String get feedbackQuestion;
+
+  /// No description provided for @feedbackDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Write your feedback'**
+  String get feedbackDescription;
+
+  /// No description provided for @feedbackButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Send feedback'**
+  String get feedbackButton;
+
+  /// No description provided for @myJourneys.
+  ///
+  /// In en, this message translates to:
+  /// **'My journeys'**
+  String get myJourneys;
+
+  /// No description provided for @myVehicles.
+  ///
+  /// In en, this message translates to:
+  /// **'My vehicles'**
+  String get myVehicles;
+
+  /// No description provided for @myBusiness.
+  ///
+  /// In en, this message translates to:
+  /// **'My business'**
+  String get myBusiness;
+
+  /// No description provided for @feedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback'**
+  String get feedback;
+
+  /// No description provided for @settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settingsLanguage;
+
+  /// No description provided for @settingsLanguageSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your language'**
+  String get settingsLanguageSentence;
+
+  /// No description provided for @account.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get account;
+
+  /// No description provided for @deleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete my account'**
+  String get deleteAccount;
+
+  /// No description provided for @deleteAccountSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete your account ?'**
+  String get deleteAccountSentence;
+
+  /// No description provided for @disconnect.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get disconnect;
+
+  /// No description provided for @me.
+  ///
+  /// In en, this message translates to:
+  /// **'me'**
+  String get me;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get language;
+
+  /// No description provided for @validate.
+  ///
+  /// In en, this message translates to:
+  /// **'Validate'**
+  String get validate;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @confirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirmation'**
+  String get confirmation;
+
+  /// No description provided for @yes.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get yes;
+
+  /// No description provided for @no.
+  ///
+  /// In en, this message translates to:
+  /// **'No'**
+  String get no;
+
+  /// No description provided for @accept.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept'**
+  String get accept;
+
+  /// No description provided for @refuse.
+  ///
+  /// In en, this message translates to:
+  /// **'Refuse'**
+  String get refuse;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+}
+
+class _CoreLocalizationsDelegate extends LocalizationsDelegate<CoreLocalizations> {
+  const _CoreLocalizationsDelegate();
+
+  @override
+  Future<CoreLocalizations> load(Locale locale) {
+    return SynchronousFuture<CoreLocalizations>(lookupCoreLocalizations(locale));
+  }
+
+  @override
+  bool isSupported(Locale locale) => <String>['en', 'fr'].contains(locale.languageCode);
+
+  @override
+  bool shouldReload(_CoreLocalizationsDelegate old) => false;
+}
+
+CoreLocalizations lookupCoreLocalizations(Locale locale) {
+
+
+  // Lookup logic when only language code is specified.
+  switch (locale.languageCode) {
+    case 'en': return CoreLocalizationsEn();
+    case 'fr': return CoreLocalizationsFr();
+  }
+
+  throw FlutterError(
+    'CoreLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.'
+  );
+}
