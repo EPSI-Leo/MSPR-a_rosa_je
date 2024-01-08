@@ -99,28 +99,6 @@ class _LoginViewState extends ConsumerState<LoginView> {
                           await SessionManager.setUsername(_login.text);
                           await SessionManager.setLoggedIn(true);
                           context.goNamed(AppRoute.home.name);
-                          //context.goNamed(AppRoute.home.name);
-                          /*ref
-                              .read(loginProvider.notifier)
-                              .login(_login.toString(), _password.toString());*/
-                          /*if (_formKey.currentState?.validate() ?? false) {
-                            // Le formulaire est valide, effectuez la connexion
-                            final loginNotifier =
-                                ref.read(loginProvider.notifier);
-                            await loginNotifier.login(
-                                _login.text, _password.text, isChecked);
-
-                            // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
-                            if (loginNotifier.state) {
-                              // Connexion réussie
-                               //TODO change to token
-                              await SessionManager.setLoggedIn(true);
-                              // ignore: use_build_context_synchronously
-                              context.goNamed(AppRoute.home.name);
-                            } else {
-                              // Échec de la connexion, gérer en conséquence
-                            }
-                          }*/
                         },
                       ),
                     ),

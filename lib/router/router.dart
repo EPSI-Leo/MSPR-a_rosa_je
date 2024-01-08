@@ -1,7 +1,7 @@
 import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/app/app.dart';
-import 'package:arosa_je/modules/auth/login.dart';
-import 'package:arosa_je/modules/auth/register.dart';
+import 'package:arosa_je/modules/auth/login/view.dart';
+import 'package:arosa_je/modules/auth/register/view.dart';
 import 'package:arosa_je/modules/home/view.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -63,5 +63,7 @@ class AppRoute {
   static const AppRoute login = AppRoute._('login', 'login');
   static const AppRoute register = AppRoute._('register', 'register');
   static const AppRoute home = AppRoute._('home', 'home');
+  static const AppRoute camera = AppRoute._('camera', 'camera');
+  static const AppRoute preview = AppRoute._('preview', 'preview');
   static const AppRoute journeys = AppRoute._('journeys', 'journeys');
 }

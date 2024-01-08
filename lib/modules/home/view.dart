@@ -1,7 +1,9 @@
 import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/app_map_gps.dart/view.dart';
+import 'package:arosa_je/modules/camera/view.dart';
 import 'package:arosa_je/modules/drawer/home_drawer.dart';
 import 'package:arosa_je/modules/home/home_requirement_state_controller.dart';
+import 'package:camera/camera.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,6 +16,11 @@ class HomeView extends ConsumerStatefulWidget {
 }
 
 class _HomeViewState extends ConsumerState<HomeView> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final coreL10n = context.coreL10n;
@@ -50,13 +57,26 @@ class _HomeViewState extends ConsumerState<HomeView> {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: AppButton(
-                  label: coreL10n.homeButton,
-                  color: Colors.green,
-                  onPressed: () {
-                    // Handle button press
-                    print("Button Pressed");
-                  },
+                child: Container(
+                  height: 50,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.green,
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.camera_alt),
+                    color: Colors.white,
+                    onPressed: () async {
+                      await availableCameras().then(
+                        (value) => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => CameraView(cameras: value))),
+                      );
+                      printDebug("Button Pressed");
+                    },
+                  ),
                 ),
               ),
             ),
