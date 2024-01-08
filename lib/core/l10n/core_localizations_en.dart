@@ -170,6 +170,27 @@ class CoreLocalizationsEn extends CoreLocalizations {
   String get feedbackButton => 'Send feedback';
 
   @override
+  String get dateStart => 'Start date';
+
+  @override
+  String get dateStartSentence => 'Enter start date';
+
+  @override
+  String get dateEnd => 'End date';
+
+  @override
+  String get dateEndSentence => 'Enter end date';
+
+  @override
+  String get description => 'Desciption';
+
+  @override
+  String get descriptionSentence => 'Enter a desciption';
+
+  @override
+  String get registerPlant => 'Register my plant';
+
+  @override
   String get feedback => 'Commentaire';
 
   @override
@@ -224,5 +245,11 @@ class CoreLocalizationsEn extends CoreLocalizations {
   String get skip => 'Skip';
 
   @override
+  String get continues => 'Continue';
+
+  @override
   String get confirm => 'Confirm';
+
+  @override
+  String get invalidCode => 'Username invalid';
 }

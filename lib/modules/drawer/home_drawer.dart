@@ -1,4 +1,5 @@
 import 'package:arosa_je/core/core.dart';
+import 'package:arosa_je/modules/app/session_manager.dart';
 import 'package:arosa_je/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -37,10 +38,7 @@ class HomeDrawer extends ConsumerWidget {
             title: Text(coreL10n.disconnect,
                 style: const TextStyle(color: Colors.red)),
             onTap: () async {
-              // Déconnectez l'utilisateur en réinitialisant l'état de connexion
-              //await SessionManager.setLoggedIn(false);
-              //StopCovoit();
-              // ignore: use_build_context_synchronously
+              await SessionManager.setLoggedIn(false);
               context.goNamed(AppRoute.login.name);
             },
           ),

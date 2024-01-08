@@ -36,15 +36,7 @@ GoRouter router(RouterRef ref) {
                     return const HomeView();
                   },
                   routes: const [
-                    /*GoRoute(
-                      path: AppRoute.journeys.path,
-                      name: AppRoute.journeys.name,
-                      builder: (context, state) {
-                        printDebug('Router: JourneysPageView');
-
-                        return const JourneysView();
-                      },
-                    ),*/
+                    
                   ],
                 ),
               ],

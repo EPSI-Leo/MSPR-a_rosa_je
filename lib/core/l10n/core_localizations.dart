@@ -423,6 +423,48 @@ abstract class CoreLocalizations {
   /// **'Send feedback'**
   String get feedbackButton;
 
+  /// No description provided for @dateStart.
+  ///
+  /// In en, this message translates to:
+  /// **'Start date'**
+  String get dateStart;
+
+  /// No description provided for @dateStartSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter start date'**
+  String get dateStartSentence;
+
+  /// No description provided for @dateEnd.
+  ///
+  /// In en, this message translates to:
+  /// **'End date'**
+  String get dateEnd;
+
+  /// No description provided for @dateEndSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter end date'**
+  String get dateEndSentence;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Desciption'**
+  String get description;
+
+  /// No description provided for @descriptionSentence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a desciption'**
+  String get descriptionSentence;
+
+  /// No description provided for @registerPlant.
+  ///
+  /// In en, this message translates to:
+  /// **'Register my plant'**
+  String get registerPlant;
+
   /// No description provided for @feedback.
   ///
   /// In en, this message translates to:
@@ -531,11 +573,23 @@ abstract class CoreLocalizations {
   /// **'Skip'**
   String get skip;
 
+  /// No description provided for @continues.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continues;
+
   /// No description provided for @confirm.
   ///
   /// In en, this message translates to:
   /// **'Confirm'**
   String get confirm;
+
+  /// No description provided for @invalidCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Username invalid'**
+  String get invalidCode;
 }
 
 class _CoreLocalizationsDelegate extends LocalizationsDelegate<CoreLocalizations> {

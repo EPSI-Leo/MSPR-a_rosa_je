@@ -8,6 +8,7 @@ class AppButton extends StatelessWidget {
       this.style,
       this.fontSize,
       this.fontColor,
+      this.isActive = true,
       required this.label,
       required this.color});
 
@@ -18,12 +19,13 @@ class AppButton extends StatelessWidget {
   final Color? color;
   final double? fontSize;
   final Color? fontColor;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
     if (icon == null) {
       return ElevatedButton(
-        onPressed: onPressed,
+        onPressed: isActive ? onPressed : null,
         style: style ??
             ElevatedButton.styleFrom(
                 foregroundColor: Theme.of(context).colorScheme.onPrimary,
@@ -33,7 +35,7 @@ class AppButton extends StatelessWidget {
       );
     }
     return ElevatedButton.icon(
-      onPressed: onPressed,
+      onPressed: isActive ? onPressed : null,
       icon: icon!,
       label: Text(label),
       style: style ??

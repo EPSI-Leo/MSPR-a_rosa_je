@@ -64,6 +64,14 @@
   "feedbackDescription" : "Ecrivez votre commentaire",
   "feedbackButton": "Envoyer votre commentaire",
 
+  "dateStart":"Date de début",
+  "dateStartSentence":"Entrer une date de début",
+  "dateEnd":"Date de fin",
+  "dateEndSentence":"Entrer une date de fin",
+  "description":"Desciption",
+  "descriptionSentence":"Entrer une desciption",
+  "registerPlant":"Enregister ma plante",
+
   "feedback" : "Commentaire",
   "settings" : "Paramètres",
   "settingsLanguage" : "Langage",
@@ -83,6 +91,7 @@
   "accept":"Accepter",
   "refuse":"Refuser",
   "skip":"Passer",
-  "confirm":"Confirmer"
-
+  "continues":"Continuer",
+  "confirm":"Confirmer",
+  "invalidCode":"Identifiant invalide"
 }

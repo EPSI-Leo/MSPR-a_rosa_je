@@ -1,3 +1,4 @@
+import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/camera/preview_page.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -108,6 +109,12 @@ class _CameraPageState extends State<CameraView> {
                 const Spacer(),
               ]),
             )),
+        const Positioned(
+            top: 30,
+            right: 30,
+            child: AppArrowBackIconButton(
+              tint: Colors.black,
+            ))
       ]),
     ));
   }

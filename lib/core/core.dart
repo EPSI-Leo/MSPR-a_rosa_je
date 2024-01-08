@@ -14,6 +14,8 @@ export 'package:arosa_je/core/widgets/buttons/link_button.dart';
 export 'package:arosa_je/core/widgets/circularprogess/app_circular_progress.dart';
 //inputs
 export 'package:arosa_je/core/widgets/inputs/app_textformfield.dart';
+export 'package:arosa_je/core/widgets/inputs/app_dateTextformField.dart';
+export 'package:arosa_je/core/widgets/inputs/description_textfield.dart';
 
 //l10n
 export "l10n/l10n.dart";

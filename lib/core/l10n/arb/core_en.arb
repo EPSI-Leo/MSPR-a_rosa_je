@@ -61,6 +61,14 @@
   "feedbackDescription" : "Write your feedback",
   "feedbackButton": "Send feedback",
 
+  "dateStart":"Start date",
+  "dateStartSentence":"Enter start date",
+  "dateEnd":"End date",
+  "dateEndSentence":"Enter end date",
+  "description":"Desciption",
+  "descriptionSentence":"Enter a desciption",
+  "registerPlant":"Register my plant",
+
 
   "feedback" : "Commentaire",
   "settings" : "Settings",
@@ -81,6 +89,7 @@
   "accept":"Accept",
   "refuse":"Refuse",
   "skip":"Skip",
-  "confirm":"Confirm"
-
+  "continues":"Continue",
+  "confirm":"Confirm",
+  "invalidCode":"Username invalid"
 }

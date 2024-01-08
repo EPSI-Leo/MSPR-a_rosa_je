@@ -1,6 +1,11 @@
+import 'dart:io';
+
 import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/app/session_manager.dart';
+import 'package:arosa_je/modules/auth/login/model/auth_alert_message.dart';
+import 'package:arosa_je/modules/auth/login/notifier.dart';
 import 'package:arosa_je/router/router.dart';
+import 'package:arosa_je/src/data/sources/http/api_client_exception.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -17,7 +22,6 @@ class _LoginViewState extends ConsumerState<LoginView> {
 
   bool isChecked = false;
   final _formKey = GlobalKey<FormState>();
-  bool _validationError = false;
 
   @override
   void dispose() {
@@ -31,7 +35,33 @@ class _LoginViewState extends ConsumerState<LoginView> {
     final spacings = ref.watch(spacingThemeProvider);
     final radius = ref.watch(radiusThemeProvider);
     final coreL10n = context.coreL10n;
+    ref.watch(loginFormProvider);
 
+    ref.listen(loginProvider, (_, next) {
+      next.when(
+        data: (isAuthenticated) {
+          if (isAuthenticated) {
+            //TODO  context.goNamed(AppRoute.home.name);
+          }
+          ref.read(loginFormProvider.notifier).setLoading(false);
+        },
+        error: (error, stackTrace) {
+          if (error is ApiClientException) {
+            if (error.code == HttpStatus.unauthorized) {
+            } else if (error.code == HttpStatus.forbidden ||
+                error.code == HttpStatus.badRequest) {
+              ref.read(loginFormProvider.notifier).setConnectionMessageError(
+                    AuthAlertMessage.invalidForm,
+                  );
+            }
+          }
+          ref.read(loginFormProvider.notifier).setLoading(false);
+        },
+        loading: () {
+          ref.read(loginFormProvider.notifier).setLoading(true);
+        },
+      );
+    });
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
@@ -56,9 +86,6 @@ class _LoginViewState extends ConsumerState<LoginView> {
                       style: TextStyle(color: colors.textfieldlabel)),
                   const AppGap.xs(),
                   SizedBox(
-                    height: _validationError
-                        ? spacings.large * 3 / 2
-                        : spacings.large,
                     child: AppTextFormField(
                       color: colors.backgroundtextfield,
                       filled: true,
@@ -68,23 +95,11 @@ class _LoginViewState extends ConsumerState<LoginView> {
                       borderColor: Colors.white,
                       radius: radius.medium,
                       controller: _login,
-                      onChanged: (value) {},
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          setState(() {
-                            _validationError = true;
-                          });
-                          return coreL10n.validateText;
-                        } else {
-                          setState(() {
-                            _validationError = false;
-                          });
-                          return null; // Validation réussie
-                        }
+                      onChanged: (value) {
+                        ref.read(loginFormProvider.notifier).setUsername(value);
                       },
                     ),
                   ),
-                  const AppGap.xs(),
                   const AppGap.small(),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: spacings.xs),
@@ -92,10 +107,15 @@ class _LoginViewState extends ConsumerState<LoginView> {
                       width: double.infinity,
                       height: spacings.large,
                       child: AppButton(
+                        isActive: ref
+                            .read(loginFormProvider.notifier)
+                            .state
+                            .isButtonActive,
                         color: colors.primary,
                         label: coreL10n.signin,
                         fontSize: 18.0,
                         onPressed: () async {
+                          //TODO à décale dans le repository
                           await SessionManager.setUsername(_login.text);
                           await SessionManager.setLoggedIn(true);
                           context.goNamed(AppRoute.home.name);
