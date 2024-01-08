@@ -585,6 +585,12 @@ abstract class CoreLocalizations {
   /// **'Confirm'**
   String get confirm;
 
+  /// No description provided for @advice.
+  ///
+  /// In en, this message translates to:
+  /// **'Advice'**
+  String get advice;
+
   /// No description provided for @invalidCode.
   ///
   /// In en, this message translates to:

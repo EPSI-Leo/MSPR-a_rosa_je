@@ -1,4 +1,5 @@
 import 'package:arosa_je/core/core.dart';
+import 'package:arosa_je/modules/advice/view.dart';
 import 'package:arosa_je/modules/app/app.dart';
 import 'package:arosa_je/modules/auth/login/view.dart';
 import 'package:arosa_je/modules/auth/register/view.dart';
@@ -35,8 +36,14 @@ GoRouter router(RouterRef ref) {
 
                     return const HomeView();
                   },
-                  routes: const [
-                    
+                  routes: [
+                    GoRoute(
+                      path: AppRoute.advice.path,
+                      name: AppRoute.advice.name,
+                      builder: (context, state) {
+                        return const AdviceView();
+                      },
+                    ),
                   ],
                 ),
               ],
@@ -57,5 +64,5 @@ class AppRoute {
   static const AppRoute home = AppRoute._('home', 'home');
   static const AppRoute camera = AppRoute._('camera', 'camera');
   static const AppRoute preview = AppRoute._('preview', 'preview');
-  static const AppRoute journeys = AppRoute._('journeys', 'journeys');
+  static const AppRoute advice = AppRoute._('advice', 'advice');
 }

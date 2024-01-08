@@ -93,5 +93,6 @@
   "skip":"Passer",
   "continues":"Continuer",
   "confirm":"Confirmer",
+  "advice":"Conseils",
   "invalidCode":"Identifiant invalide"
 }

@@ -91,5 +91,6 @@
   "skip":"Skip",
   "continues":"Continue",
   "confirm":"Confirm",
+  "advice":"Advice",
   "invalidCode":"Username invalid"
 }

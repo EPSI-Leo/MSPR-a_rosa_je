@@ -251,5 +251,8 @@ class CoreLocalizationsFr extends CoreLocalizations {
   String get confirm => 'Confirmer';
 
   @override
+  String get advice => 'Conseils';
+
+  @override
   String get invalidCode => 'Identifiant invalide';
 }
