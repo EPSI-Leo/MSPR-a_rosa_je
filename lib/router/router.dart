@@ -41,7 +41,7 @@ GoRouter router(RouterRef ref) {
                       path: AppRoute.advice.path,
                       name: AppRoute.advice.name,
                       builder: (context, state) {
-                        return const AdviceView();
+                        return AdviceView();
                       },
                     ),
                   ],
