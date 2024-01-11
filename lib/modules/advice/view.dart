@@ -1,28 +1,19 @@
 import 'package:arosa_je/core/core.dart';
-import 'package:arosa_je/modules/app/session_manager.dart';
-import 'package:arosa_je/router/router.dart';
+import 'package:arosa_je/modules/advice/add_plant.dart';
+import 'package:arosa_je/modules/advice/plant_data.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
-
 import '../drawer/home_drawer.dart';
 
-class Plant {
-  String name;
-  String careAdvice;
 
-  Plant({required this.name, required this.careAdvice});
+class AdviceView extends StatefulWidget {
+  AdviceView({Key? key}) : super(key: key);
+
+  @override
+  _AdviceViewState createState() => _AdviceViewState();
 }
 
-class AdviceView extends StatelessWidget {
-  AdviceView({super.key});
-
-  final List<Plant> plants = [
-    Plant(name: 'Rose', careAdvice: 'Water regularly and provide sunlight.'),
-    Plant(name: 'Lily', careAdvice: 'Keep the soil moist and provide shade.'),
-    Plant(name: 'Succulent', careAdvice: 'Water sparingly and give sunlight.'),
-    // Add more plants as needed
-  ];
+class _AdviceViewState extends State<AdviceView> {
+  final List<Plant> plants = plantList;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +27,20 @@ class AdviceView extends StatelessWidget {
         itemBuilder: (context, index) {
           return PlantItem(plants[index]);
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          final newPlant = await Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => AddPlantScreen()),
+          );
+          if (newPlant != null) {
+            setState(() {
+              plants.add(newPlant);
+            });
+          }
+        },
+        child: Icon(Icons.add),
       ),
       drawer: const HomeDrawer(),
     );
