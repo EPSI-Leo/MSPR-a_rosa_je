@@ -110,10 +110,13 @@ class _CameraPageState extends State<CameraView> {
                 const Spacer(),
               ]),
             )),
-        const Positioned(
+        Positioned(
             top: 30,
             right: 30,
             child: AppArrowBackIconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
               tint: Colors.black,
             ))
       ]),
