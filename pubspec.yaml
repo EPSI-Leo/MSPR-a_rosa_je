@@ -54,3 +54,5 @@ flutter:
   generate: false
   assets:
     - lib/assets/images/icon.png
+    - lib/assets/plants/rose.jpg
+    - lib/assets/plants/fern.jpg
