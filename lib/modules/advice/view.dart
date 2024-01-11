@@ -6,7 +6,7 @@ import '../drawer/home_drawer.dart';
 
 
 class AdviceView extends StatefulWidget {
-  AdviceView({Key? key}) : super(key: key);
+  const AdviceView({Key? key}) : super(key: key);
 
   @override
   _AdviceViewState createState() => _AdviceViewState();
@@ -21,6 +21,12 @@ class _AdviceViewState extends State<AdviceView> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Plant Care Guide'),
+        leading: AppArrowBackIconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          tint: Colors.black,
+        ),
       ),
       body: ListView.builder(
         itemCount: plants.length,
@@ -42,7 +48,6 @@ class _AdviceViewState extends State<AdviceView> {
         },
         child: Icon(Icons.add),
       ),
-      drawer: const HomeDrawer(),
     );
   }
 }
@@ -50,7 +55,7 @@ class _AdviceViewState extends State<AdviceView> {
 class PlantItem extends StatefulWidget {
   final Plant plant;
 
-  PlantItem(this.plant);
+  const PlantItem(this.plant);
 
   @override
   _PlantItemState createState() => _PlantItemState();
