@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 class CameraView extends StatefulWidget {
-  const CameraView({Key? key, required this.cameras}) : super(key: key);
+  const CameraView({super.key, required this.cameras});
 
   final List<CameraDescription>? cameras;
 
@@ -39,6 +39,7 @@ class _CameraPageState extends State<CameraView> {
     try {
       await _cameraController.setFlashMode(FlashMode.off);
       XFile picture = await _cameraController.takePicture();
+      // ignore: use_build_context_synchronously
       Navigator.push(
           context,
           MaterialPageRoute(

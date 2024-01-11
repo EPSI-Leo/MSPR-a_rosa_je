@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 // ignore: must_be_immutable
 class AppTextFormField extends StatelessWidget {
   AppTextFormField(
-      {Key? key,
+      {super.key,
       this.onChanged,
       this.controller,
       this.validator,
@@ -20,8 +20,7 @@ class AppTextFormField extends StatelessWidget {
       this.maxLength,
       this.keyboardType,
       this.inputFormatters,
-      this.maxLines})
-      : super(key: key);
+      this.maxLines});
 
   final String? label;
   final ValueChanged<String>? onChanged;

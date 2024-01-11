@@ -2,9 +2,7 @@ import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/app_map_gps.dart/view.dart';
 import 'package:arosa_je/modules/camera/view.dart';
 import 'package:arosa_je/modules/drawer/home_drawer.dart';
-import 'package:arosa_je/modules/home/home_requirement_state_controller.dart';
 import 'package:camera/camera.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -23,7 +21,6 @@ class _HomeViewState extends ConsumerState<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    final coreL10n = context.coreL10n;
     return Scaffold(
       body: Stack(
         children: [

@@ -72,6 +72,7 @@ class _AppState extends ConsumerState<App> {
       });
 
       // Effectuez la redirection après avoir vérifié la géolocalisation et la connexion
+      // ignore: use_build_context_synchronously
       _navigateBasedOnPermissionAndLoginStatus(context, isLoggedIn);
     }
   }

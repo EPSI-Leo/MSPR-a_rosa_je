@@ -39,6 +39,7 @@ class HomeDrawer extends ConsumerWidget {
                 style: const TextStyle(color: Colors.red)),
             onTap: () async {
               await SessionManager.setLoggedIn(false);
+              // ignore: use_build_context_synchronously
               context.goNamed(AppRoute.login.name);
             },
           ),
