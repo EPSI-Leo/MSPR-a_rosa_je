@@ -1,8 +1,8 @@
 import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/camera/preview_page.dart';
 import 'package:camera/camera.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class CameraView extends StatefulWidget {
   const CameraView({super.key, required this.cameras});
@@ -112,7 +112,7 @@ class _CameraPageState extends State<CameraView> {
             )),
         Positioned(
             top: 30,
-            right: 30,
+            left: 30,
             child: AppArrowBackIconButton(
               onPressed: () {
                 Navigator.of(context).pop();
