@@ -8,16 +8,20 @@ import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CustomMarker {
+  final String id;
   final LatLng location;
   final Image image;
   final String onPressed;
 
   CustomMarker(
-      {required this.location, required this.image, this.onPressed = ''});
+      {required this.id,
+      required this.location,
+      required this.image,
+      this.onPressed = ''});
 }
 
 class MapView extends ConsumerStatefulWidget {
-  const MapView({Key? key});
+  const MapView({super.key});
 
   @override
   ConsumerState<MapView> createState() => _MapViewState();
@@ -37,68 +41,75 @@ class _MapViewState extends ConsumerState<MapView> {
     //TODO a supp
     markers.add(
       CustomMarker(
+        id: '1',
         location: LatLng(initialCenter!.latitude, initialCenter.longitude),
-        image: Image(
+        image: const Image(
           image: AssetImage('lib/assets/images/icon.png'),
         ),
       ),
     );
     markers.add(
       CustomMarker(
+        id: '2',
         location: LatLng(
             initialCenter.latitude + 0.0001, initialCenter.longitude + 0.0001),
-        image: Image(
+        image: const Image(
           image: AssetImage('lib/assets/images/icon.png'),
         ),
       ),
     );
     markers.add(
       CustomMarker(
+        id: '3',
         location: LatLng(initialCenter.latitude, initialCenter.longitude),
-        image: Image(
+        image: const Image(
           image: AssetImage('lib/assets/images/icon.png'),
         ),
       ),
     );
     markers.add(
       CustomMarker(
+        id: '4',
         location: LatLng(
             initialCenter.latitude + 0.0001, initialCenter.longitude + 0.0001),
-        image: Image(
+        image: const Image(
           image: AssetImage('lib/assets/images/icon.png'),
         ),
       ),
     );
     markers.add(
       CustomMarker(
+        id: '5',
         location: LatLng(
             initialCenter.latitude + 0.001, initialCenter.longitude + 0.0008),
-        image: Image(
+        image: const Image(
           image: AssetImage('lib/assets/images/icon.png'),
         ),
       ),
     );
     markers.add(
       CustomMarker(
+        id: '6',
         location: LatLng(
             initialCenter.latitude - 0.001, initialCenter.longitude + 0.0001),
-        image: Image(
+        image: const Image(
           image: AssetImage('lib/assets/images/icon.png'),
         ),
       ),
     );
     markers.add(
       CustomMarker(
+        id: '7',
         location: LatLng(
             initialCenter.latitude - 0.001, initialCenter.longitude - 0.0005),
-        image: Image(
+        image: const Image(
           image: AssetImage('lib/assets/images/icon.png'),
         ),
       ),
     );
 
     // Vérifier si initialCenter est non nul
-    return map(initialCenter!);
+    return map(initialCenter);
   }
 
   Widget map(LatLng initialCenter) {
@@ -132,9 +143,11 @@ class _MapViewState extends ConsumerState<MapView> {
                       point: marker.location,
                       child: IconButton(
                           onPressed: () {
-                            printDebug("J'ai soif !!!!");
+                            showDialog(
+                                context: context,
+                                builder: (context) => PlantView(id: marker.id));
                           },
-                          icon: Image(
+                          icon: const Image(
                               image: AssetImage('lib/assets/images/icon.png'))),
                     ),
                   )
