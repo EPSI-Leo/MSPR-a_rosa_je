@@ -11,7 +11,8 @@ class DescriptionTextField extends StatelessWidget {
   final String? label;
   final String? hint;
 
-  DescriptionTextField({
+  const DescriptionTextField({
+    super.key,
     required this.controller,
     this.onChanged,
     this.validator,

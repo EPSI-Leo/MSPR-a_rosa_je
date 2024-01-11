@@ -109,6 +109,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
                       child: AppButton(
                         isActive: ref
                             .read(loginFormProvider.notifier)
+                            // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
                             .state
                             .isButtonActive,
                         color: colors.primary,
@@ -118,6 +119,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
                           //TODO à décale dans le repository
                           await SessionManager.setUsername(_login.text);
                           await SessionManager.setLoggedIn(true);
+                          // ignore: use_build_context_synchronously
                           context.goNamed(AppRoute.home.name);
                         },
                       ),

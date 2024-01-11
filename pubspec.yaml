@@ -30,6 +30,11 @@ dependencies:
   camera: ^0.10.5+8
   path_provider: ^2.1.1
   path: ^1.8.3
+  flutter_localizations:
+    sdk: flutter
+  freezed_annotation: ^2.4.1
+  meta: ^1.10.0
+  http: ^1.1.2
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,6 @@
 import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/router/router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -17,9 +16,7 @@ class _RegisterViewState extends ConsumerState<RegisterView> {
 
   final TextEditingController _usernameController = TextEditingController();
 
-  bool _acceptTermsOfUse = false;
   bool hasViewedTermsOfUse = false;
-  bool _termsError = false;
 
   @override
   Widget build(

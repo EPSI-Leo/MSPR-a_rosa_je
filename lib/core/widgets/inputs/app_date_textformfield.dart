@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 // ignore: must_be_immutable
 class AppTextFormFieldDate extends StatelessWidget {
   AppTextFormFieldDate(
-      {Key? key,
+      {super.key,
       this.onChanged,
       this.controller,
       this.validator,
@@ -20,8 +20,7 @@ class AppTextFormFieldDate extends StatelessWidget {
       this.maxLength,
       this.keyboardType,
       this.inputFormatters,
-      this.maxLines})
-      : super(key: key);
+      this.maxLines});
 
   final String? label;
   final ValueChanged<String>? onChanged;
