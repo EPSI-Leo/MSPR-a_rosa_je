@@ -2,11 +2,9 @@ import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/advice/add_plant.dart';
 import 'package:arosa_je/modules/advice/plant_data.dart';
 import 'package:flutter/material.dart';
-import '../drawer/home_drawer.dart';
-
 
 class AdviceView extends StatefulWidget {
-  const AdviceView({Key? key}) : super(key: key);
+  const AdviceView({super.key});
 
   @override
   _AdviceViewState createState() => _AdviceViewState();
@@ -17,10 +15,9 @@ class _AdviceViewState extends State<AdviceView> {
 
   @override
   Widget build(BuildContext context) {
-    final coreL10n = context.coreL10n;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Plant Care Guide'),
+        title: const Text('Plant Care Guide'),
         leading: AppArrowBackIconButton(
           onPressed: () {
             Navigator.of(context).pop();
@@ -46,7 +43,7 @@ class _AdviceViewState extends State<AdviceView> {
             });
           }
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

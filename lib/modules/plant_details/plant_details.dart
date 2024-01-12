@@ -7,7 +7,7 @@ class PlantDetailScreen extends StatelessWidget {
   // Dummy plant list (replace it with your actual data fetching logic)
   final List<Plant> dummyPlantList = plantList;
 
-  PlantDetailScreen({required this.id});
+  PlantDetailScreen({super.key, required this.id});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class PlantDetailScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Plant Details'),
+        title: const Text('Plant Details'),
       ),
       body: Center(
         child: Column(
