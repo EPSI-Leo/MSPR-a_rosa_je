@@ -17,6 +17,6 @@ class Plant {
 }
 
 List<Plant> plantList = [
-  Plant("1", 'Rose', LatLng(0.001, 0.0001), 'lib/assets/plants/rose.jpg', 101, advice: 'Keep soil moist.'),
-  Plant("2", 'Fern', LatLng(0, 0), 'lib/assets/plants/fern.jpg', 102),
+  Plant("1", 'Rose', const LatLng(0.001, 0.0001), 'lib/assets/plants/rose.jpg', 101, advice: 'Keep soil moist.'),
+  Plant("2", 'Fern', const LatLng(0, 0), 'lib/assets/plants/fern.jpg', 102),
 ];

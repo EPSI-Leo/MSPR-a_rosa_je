@@ -2,11 +2,13 @@ import 'package:arosa_je/modules/advice/plant_data.dart';
 import 'package:flutter/material.dart';
 
 class AddPlantScreen extends StatefulWidget {
+  const AddPlantScreen({super.key});
+
   @override
-  _AddPlantScreenState createState() => _AddPlantScreenState();
+  AddPlantScreenState createState() => AddPlantScreenState();
 }
 
-class _AddPlantScreenState extends State<AddPlantScreen> {
+class AddPlantScreenState extends State<AddPlantScreen> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController adviceController = TextEditingController();
 
@@ -14,7 +16,7 @@ class _AddPlantScreenState extends State<AddPlantScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Plant'),
+        title: const Text('Add Plant'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -23,14 +25,14 @@ class _AddPlantScreenState extends State<AddPlantScreen> {
           children: [
             TextField(
               controller: nameController,
-              decoration: InputDecoration(labelText: 'Plant Name'),
+              decoration: const InputDecoration(labelText: 'Plant Name'),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextField(
               controller: adviceController,
-              decoration: InputDecoration(labelText: 'Care Advice'),
+              decoration: const InputDecoration(labelText: 'Care Advice'),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 if (nameController.text.isNotEmpty &&
@@ -44,7 +46,7 @@ class _AddPlantScreenState extends State<AddPlantScreen> {
                   // Show an error message or handle the case where input is incomplete
                 }
               },
-              child: Text('Add Plant'),
+              child: const Text('Add Plant'),
             ),
           ],
         ),

@@ -1,8 +1,6 @@
 import 'package:arosa_je/core/core.dart';
-import 'package:arosa_je/core/mock_plant_data/plant_data.dart';
 import 'package:arosa_je/modules/advice/view.dart';
 import 'package:arosa_je/modules/app/app.dart';
-import 'package:arosa_je/modules/app/session_manager.dart';
 import 'package:arosa_je/modules/auth/login/view.dart';
 import 'package:arosa_je/modules/auth/register/view.dart';
 import 'package:arosa_je/modules/home/view.dart';
@@ -44,7 +42,7 @@ GoRouter router(RouterRef ref) {
                       path: AppRoute.advice.path,
                       name: AppRoute.advice.name,
                       builder: (context, state) {
-                        return AdviceView();
+                        return const AdviceView();
                       },
                     ),
                     GoRoute(

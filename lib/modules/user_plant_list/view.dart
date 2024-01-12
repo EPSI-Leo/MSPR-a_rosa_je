@@ -1,30 +1,38 @@
 import 'package:arosa_je/core/mock_plant_data/plant_data.dart';
+import 'package:arosa_je/modules/user_plant_list/notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class PlantPage extends StatefulWidget {
+
+class PlantPage extends ConsumerStatefulWidget {
   final String userId;
 
-  PlantPage({required this.userId});
+  const PlantPage({super.key, required this.userId});
 
   @override
-  _PlantPageState createState() => _PlantPageState();
+  ConsumerState<PlantPage> createState() => _PlantPageState();
 }
 
-class _PlantPageState extends State<PlantPage> {
+class _PlantPageState extends ConsumerState<PlantPage> {
   List<dynamic> plants = [];
 
-  @override
-  void initState() {
-    super.initState();
-    // Fetch plants when the widget is initialized
-    // fetchPlants();
-  }
 
   @override
   Widget build(BuildContext context) {
+    ref.listen(plantsNotifierProvider, (_, next) {
+      next.when(
+        data: (data) async {
+          plants = data;
+        },
+        error: (error, stackTrace) {
+        },
+        loading: () {
+        },
+      );
+    });
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Plants'),
+        title: const Text('My Plants'),
       ),
       body: ListView.builder(
         itemCount: plants.length,
@@ -39,19 +47,19 @@ class _PlantPageState extends State<PlantPage> {
 class PlantTile extends StatefulWidget {
   final Plant plant;
 
-  PlantTile({required this.plant});
+  const PlantTile({super.key, required this.plant});
 
   @override
-  _PlantTileState createState() => _PlantTileState();
+  PlantTileState createState() => PlantTileState();
 }
 
-class _PlantTileState extends State<PlantTile> {
+class PlantTileState extends State<PlantTile> {
   bool isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(8.0),
       child: ExpansionTile(
         title: Text(widget.plant.name),
         leading: CircleAvatar(

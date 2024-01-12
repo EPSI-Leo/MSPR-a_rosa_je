@@ -5,7 +5,6 @@ class SessionManager {
 
   static const String _keyLoggedIn = 'isLoggedIn';
   static const String _keyID = 'id';
-  static const String _selectedVehicles = 'selectedVehicles';
   // Ajoutez d'autres clés selon vos besoins
 
   static Future<void> setLoggedIn(bool value) async {

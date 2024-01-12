@@ -1,4 +1,3 @@
-import 'package:arosa_je/core/core.dart';
 import 'package:arosa_je/modules/app/app_initialcenter_providers.dart';
 import 'package:arosa_je/modules/plant_details/plant_details.dart';
 import 'package:flutter/material.dart';

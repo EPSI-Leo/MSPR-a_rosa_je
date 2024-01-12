@@ -2,7 +2,7 @@ import 'core_localizations.dart';
 
 /// The translations for French (`fr`).
 class CoreLocalizationsFr extends CoreLocalizations {
-  CoreLocalizationsFr([String locale = 'fr']) : super(locale);
+  CoreLocalizationsFr([super.locale = 'fr']);
 
   @override
   String get validateEmail => 'Veuillez entrer une adresse e-mail';

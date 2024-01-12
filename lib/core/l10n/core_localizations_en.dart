@@ -2,7 +2,7 @@ import 'core_localizations.dart';
 
 /// The translations for English (`en`).
 class CoreLocalizationsEn extends CoreLocalizations {
-  CoreLocalizationsEn([String locale = 'en']) : super(locale);
+  CoreLocalizationsEn([super.locale = 'en']);
 
   @override
   String get validateEmail => 'Please enter an email address';
