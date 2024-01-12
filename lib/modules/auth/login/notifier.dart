@@ -1,3 +1,4 @@
+import 'package:arosa_je/data/repositories/auth/login_repository.dart';
 import 'package:arosa_je/modules/auth/login/model/auth_alert_message.dart';
 import 'package:arosa_je/modules/auth/login/model/login_status.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -11,19 +12,18 @@ class Login extends _$Login {
     return false;
   }
 
-  /*Future<void> login(
-    String login,
-    String password,
-    bool generateMfaToken,
+  Future<void> login(
+    String username,
   ) async {
     state = const AsyncLoading();
     ref.read(loginFormProvider.notifier).setConnectionMessageError(
           AuthAlertMessage.none,
         );
     final loginRepository = ref.read(loginRepositoryProvider);
-    state =
-        await AsyncValue.guard(() => loginRepository.login()); //TODO add fields
-  }*/
+    state = await AsyncValue.guard(() => loginRepository.login(
+          username,
+        ));
+  }
 }
 
 @Riverpod(keepAlive: false)

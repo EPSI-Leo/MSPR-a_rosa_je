@@ -39,9 +39,11 @@ class _LoginViewState extends ConsumerState<LoginView> {
 
     ref.listen(loginProvider, (_, next) {
       next.when(
-        data: (isAuthenticated) {
+        data: (isAuthenticated) async {
           if (isAuthenticated) {
-            //TODO  context.goNamed(AppRoute.home.name);
+            await SessionManager.setUsername(_login.text);
+            await SessionManager.setLoggedIn(true);
+            context.goNamed(AppRoute.home.name);
           }
           ref.read(loginFormProvider.notifier).setLoading(false);
         },
@@ -116,11 +118,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
                         label: coreL10n.signin,
                         fontSize: 18.0,
                         onPressed: () async {
-                          //TODO à décale dans le repository
-                          await SessionManager.setUsername(_login.text);
-                          await SessionManager.setLoggedIn(true);
-                          // ignore: use_build_context_synchronously
-                          context.goNamed(AppRoute.home.name);
+                          ref.read(loginProvider.notifier).login(_login.text);
                         },
                       ),
                     ),
