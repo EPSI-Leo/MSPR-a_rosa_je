@@ -36,8 +36,16 @@ class HomeDrawer extends ConsumerWidget {
           ListTile(
             leading: const Icon(Icons.chat),
             title: Text(coreL10n.advice),
+            onTap: () async {
+              String? userId = await SessionManager.getId();
+              context.goNamed(AppRoute.advice.name, pathParameters: {'userId': userId ?? ""});
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.chat),
+            title: Text(coreL10n.myPlants),
             onTap: () {
-              context.goNamed(AppRoute.advice.name);
+              context.goNamed(AppRoute.userPlantList.name);
             },
           ),
           ListTile(

@@ -18,18 +18,45 @@ class PlantDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Plant Details'),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Display plant image
-            Image.asset(selectedPlant.image),
+            Container(
+              width: double.infinity,
+              height: 200, // Adjust the height as needed
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(selectedPlant.image),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+            ),
+
+            SizedBox(height: 16.0),
 
             // Display plant name
-            Text(selectedPlant.name),
+            Text(
+              selectedPlant.name,
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            SizedBox(height: 8.0),
 
             // Display plant advice
-            Text(selectedPlant.advice ?? 'No advice available'),
+            Text(
+              selectedPlant.advice ?? 'No advice available',
+              style: TextStyle(
+                fontSize: 16.0,
+                color: Colors.grey,
+              ),
+            ),
           ],
         ),
       ),

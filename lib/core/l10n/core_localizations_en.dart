@@ -254,5 +254,8 @@ class CoreLocalizationsEn extends CoreLocalizations {
   String get advice => 'Advice';
 
   @override
+  String get myPlants => 'My plants';
+
+  @override
   String get invalidCode => 'Username invalid';
 }
