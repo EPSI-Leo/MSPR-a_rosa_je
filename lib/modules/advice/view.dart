@@ -3,7 +3,6 @@ import 'package:arosa_je/modules/advice/add_plant.dart';
 import 'package:arosa_je/modules/advice/plant_data.dart';
 import 'package:flutter/material.dart';
 
-
 class AdviceView extends StatefulWidget {
   const AdviceView({super.key});
 
