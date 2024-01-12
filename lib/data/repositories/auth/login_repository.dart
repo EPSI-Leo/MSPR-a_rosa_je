@@ -20,5 +20,4 @@ class LoginRepository {
     return userExists;
   }
 
-  
 }

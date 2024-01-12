@@ -41,7 +41,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
       next.when(
         data: (isAuthenticated) async {
           if (isAuthenticated) {
-            await SessionManager.setUsername(_login.text);
+            //await SessionManager.setId(data.id); //TODO : voir id avec le backend
             await SessionManager.setLoggedIn(true);
             context.goNamed(AppRoute.home.name);
           }

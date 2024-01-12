@@ -4,7 +4,7 @@ class SessionManager {
   static const FlutterSecureStorage _storage = FlutterSecureStorage();
 
   static const String _keyLoggedIn = 'isLoggedIn';
-  static const String _keyUsername = 'username';
+  static const String _keyID = 'id';
   static const String _selectedVehicles = 'selectedVehicles';
   // Ajoutez d'autres clés selon vos besoins
 
@@ -17,21 +17,11 @@ class SessionManager {
     return value == 'true';
   }
 
-  static Future<void> setUsername(String username) async {
-    await _storage.write(key: _keyUsername, value: username);
+  static Future<void> setId(String username) async {
+    await _storage.write(key: _keyID, value: username);
   }
 
-  static Future<String?> getUsername() async {
-    return await _storage.read(key: _keyUsername);
+  static Future<String?> getId() async {
+    return await _storage.read(key: _keyID);
   }
-
-  static Future<void> setVehicle(String selectedVehicle) async {
-    await _storage.write(key: _keyUsername, value: _selectedVehicles);
-  }
-
-  static Future<String?> getVehicle() async {
-    return await _storage.read(key: _selectedVehicles);
-  }
-
-  // Ajoutez d'autres méthodes pour stocker/récupérer d'autres informations de session
 }
