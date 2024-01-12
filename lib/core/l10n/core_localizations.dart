@@ -591,6 +591,12 @@ abstract class CoreLocalizations {
   /// **'Advice'**
   String get advice;
 
+  /// No description provided for @myPlants.
+  ///
+  /// In en, this message translates to:
+  /// **'My plants'**
+  String get myPlants;
+
   /// No description provided for @invalidCode.
   ///
   /// In en, this message translates to:
