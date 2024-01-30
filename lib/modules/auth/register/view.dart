@@ -70,6 +70,7 @@ class _RegisterViewState extends ConsumerState<RegisterView> {
                     label: coreL10n.signup,
                     color: colors.primary,
                     onPressed: () async {
+                      context.goNamed(AppRoute.home.name); // temp
                       /*if (_formKey.currentState!.validate()) {
                         if (!_acceptTermsOfUse) {
                           setState(() {
