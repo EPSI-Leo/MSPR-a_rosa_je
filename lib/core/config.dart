@@ -27,6 +27,6 @@ abstract class Config {
 
 class _ProdConfig implements Config {
   @override
-  String get baseUrl => '172.17.0.2:3306';
+  String get baseUrl => 'http://localhost:8000/';
 }
 //TODO change baseUrl
